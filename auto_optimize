@@ -1,0 +1,31 @@
+# Please put in file ~/.bashrc or ~/.zshrc
+alias clean='yarn cache clean && npm cache clean --force && rm -rf ~/.npm && rm -rf ~/.yarn && rm -rf ~/.cache && rm -rf ~/Library/Caches && rm -rf ~/Library/Logs && rm -rf ~/Library/Application\ Support/Code/Cache && rm -rf ~/Library/Application\ Support/Code/CachedData && rm -rf ~/Library/Application\ Support/Code/CachedExtensions && rm -rf ~/Library/Application\ Support/Code/User/workspaceStorage'
+
+clean_dev() {
+  echo "--- Clearing App Caches ---"
+  
+  # Chrome
+  rm -rf ~/Library/Caches/Google/Chrome/Default/Cache/*
+  
+  # VS Code (Keeps settings, clears heavy temp data)
+  rm -rf ~/Library/Application\ Support/Code/CachedData/*
+  rm -rf ~/Library/Application\ Support/Code/Crashpad/*
+  
+  # Postman
+  rm -rf ~/Library/Application\ Support/Postman/Cache/*
+  rm -rf ~/Library/Application\ Support/Postman/IndexedDB/*
+  
+  # DBeaver
+  rm -rf ~/Library/DBeaverData/workspace6/General/.metadata/.plugins/org.eclipse.core.resources/.snap
+  
+  # Android Studio (Careful: This clears build caches, not settings)
+  rm -rf ~/Library/Caches/Google/AndroidStudio*/*
+  
+  # OrbStack
+  # Note: OrbStack handles its own storage; better to use their CLI
+  if command -v orb &> /dev/null; then
+    orb cleanup
+  fi
+
+  echo "Cleanup complete!"
+}
