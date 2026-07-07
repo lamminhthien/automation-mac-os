@@ -1,0 +1,6 @@
+# Please put into ~/.bashrc or ~/.zshrc
+
+alias relax='open -a "Google Chrome" https://www.youtube.com https://www.tiktok.com https://facebook.com'
+alias login_microsoft='open -a "Google Chrome" https://outlook.office.com'
+alias work='open -a "Google Chrome" https://github.com https://www.atlassian.com/software/jira https://myapps.microsoft.com/ https://onedrive.live.com https://outlook.office.com'
+alias music_relax='open -a "Google Chrome" https://www.youtube.com/watch?v=Jw4FWzgYmkw'
