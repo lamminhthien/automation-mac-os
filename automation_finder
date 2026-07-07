@@ -1,0 +1,6 @@
+# Please put into ~/.bashrc or ~/.zshrc
+
+alias code_folder='open ~/code'
+alias downloads='open ~/Downloads'
+alias desktop='open ~/Desktop'
+alias documents='open ~/Documents'
